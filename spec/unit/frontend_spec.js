@@ -98,14 +98,14 @@ describe('Frontend', function(){
         var validToken = "v4l1d0k3n";
 
         beforeEach(function() {
-          var tokenConfig = _.merge({ token: validToken }, config);
+          var tokenConfig = _.merge({}, config, { token: validToken });
           
           target = new Frontend(tokenConfig, smi);
         });
 
         describe('invalid token', function(){
           it('returns status 500', function(done){
-            frames[HEADERS_FRAME] = msgpack.encode({ token: 'abc '});
+            frames[HEADERS_FRAME] = msgpack.encode({ token: 'abc' });
 
             socketMock.on = function(type, callback){
               if(type === 'message'){

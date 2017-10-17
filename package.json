@@ -38,7 +38,7 @@
     "grunt-jasmine-node-coverage-validation": "0.0.4"
   },
   "dependencies": {
-    "lodash": "^4.5.1",
+    "lodash": "^3.10",
     "msgpack-js": "~0.3.0",
     "uuid": "~3.0.1",
     "zmq": "2.15.x",
